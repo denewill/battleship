@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug-Windows</Configuration>
+    <ProjectGuid>{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}</ProjectGuid>
+    <RootNamespace>MyGame</RootNamespace>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <AssemblyName>MyGame</AssemblyName>
+    <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
+    <SuppressXamMacMigration>True</SuppressXamMacMigration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>WinExe</OutputType>
+    <ApplicationIcon>Resources\SwinGame.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Windows|x86' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>false</UseSGen>
+    <UseRefCounting>false</UseRefCounting>
+    <Profiling>false</Profiling>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PrepareForRunDependsOn>$(PrepareForRunDependsOn);CopyLibsToOut</PrepareForRunDependsOn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\libcurl.dll" />
+    <Content Include="bin\Debug\libeay32.dll" />
+    <Content Include="bin\Debug\libFLAC-8.dll" />
+    <Content Include="bin\Debug\libfreetype-6.dll" />
+    <Content Include="bin\Debug\libidn-11.dll" />
+    <Content Include="bin\Debug\libjpeg-9.dll" />
+    <Content Include="bin\Debug\libmodplug-1.dll" />
+    <Content Include="bin\Debug\libogg-0.dll" />
+    <Content Include="bin\Debug\libpng16-16.dll" />
+    <Content Include="bin\Debug\librtmp.dll" />
+    <Content Include="bin\Debug\libSGSDL2.dll" />
+    <Content Include="bin\Debug\libssh2.dll" />
+    <Content Include="bin\Debug\libtiff-5.dll" />
+    <Content Include="bin\Debug\libvorbis-0.dll" />
+    <Content Include="bin\Debug\libvorbisfile-3.dll" />
+    <Content Include="bin\Debug\libwebp-4.dll" />
+    <Content Include="bin\Debug\MyGame.exe" />
+    <Content Include="bin\Debug\MyGame.pdb" />
+    <Content Include="bin\Debug\MyGame.vshost.exe" />
+    <Content Include="bin\Debug\Resources\animations\startup.txt" />
+    <Content Include="bin\Debug\Resources\bundles\FileDialog.txt" />
+    <Content Include="bin\Debug\Resources\bundles\splash.txt" />
+    <Content Include="bin\Debug\Resources\images\fdFile.png" />
+    <Content Include="bin\Debug\Resources\images\fdFolder.png" />
+    <Content Include="bin\Debug\Resources\images\FileDialog_Active.png" />
+    <Content Include="bin\Debug\Resources\images\FileDialog_Background.png" />
+    <Content Include="bin\Debug\Resources\images\FileDialog_Inactive.png" />
+    <Content Include="bin\Debug\Resources\images\FileDialog_Scroll.png" />
+    <Content Include="bin\Debug\Resources\images\FileDialog_ScrollSmall.png" />
+    <Content Include="bin\Debug\Resources\images\Swinburne.jpg" />
+    <Content Include="bin\Debug\Resources\images\SwinGameAni.png" />
+    <Content Include="bin\Debug\Resources\panels\FileDialog.txt" />
+    <Content Include="bin\Debug\Resources\sounds\error.wav" />
+    <Content Include="bin\Debug\Resources\sounds\SwinGameStart.wav" />
+    <Content Include="bin\Debug\Resources\SwinGame.ico" />
+    <Content Include="bin\Debug\SGSDK.dll" />
+    <Content Include="bin\Debug\smpeg2.dll" />
+    <Content Include="bin\Debug\ssleay32.dll" />
+    <Content Include="bin\Debug\SwinGame.dll" />
+    <Content Include="bin\Debug\zlib1.dll" />
+    <Content Include="MyGame.csproj" />
+    <Content Include="MyGame.sln" />
+    <Content Include="MyGameMac.csproj" />
+    <Content Include="MyGameMac.sln" />
+    <Content Include="MyGameUnx.csproj" />
+    <Content Include="MyGameUnx.sln" />
+    <Content Include="obj\x86\Debug-Windows\MyGame.exe" />
+    <Content Include="obj\x86\Debug-Windows\MyGame.pdb" />
+    <Content Include="obj\x86\Debug-Windows\MyGameWin.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\AudioController.cs" />
+    <Compile Include="src\DeploymentController.cs" />
+    <Compile Include="src\DiscoveryController.cs" />
+    <Compile Include="src\EndingGameController.cs" />
+    <Compile Include="src\GameController.cs" />
+    <Compile Include="src\GameLogic.cs" />
+    <Compile Include="src\GameResources.cs" />
+    <Compile Include="src\GameState.cs" />
+    <Compile Include="src\HighScoreController.cs" />
+    <Compile Include="src\MenuController.cs" />
+    <Compile Include="src\Model\AIHardPlayer.cs" />
+    <Compile Include="src\Model\AIMediumPlayer.cs" />
+    <Compile Include="src\Model\AIOption.cs" />
+    <Compile Include="src\Model\AIPlayer.cs" />
+    <Compile Include="src\Model\AttackResult.cs" />
+    <Compile Include="src\Model\BattleShipsGame.cs" />
+    <Compile Include="src\Model\Direction.cs" />
+    <Compile Include="src\Model\ISeaGrid.cs" />
+    <Compile Include="src\Model\Player.cs" />
+    <Compile Include="src\Model\ResultOfAttack.cs" />
+    <Compile Include="src\Model\SeaGrid.cs" />
+    <Compile Include="src\Model\SeaGridAdapter.cs" />
+    <Compile Include="src\Model\Ship.cs" />
+    <Compile Include="src\Model\ShipName.cs" />
+    <Compile Include="src\Model\Tile.cs" />
+    <Compile Include="src\Model\TileView.cs" />
+    <Compile Include="src\UtilityFunctions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SwinGame">
+      <HintPath>lib\SwinGame.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\MyGameWin\v14\.suo" />
+    <None Include=".vs\MyGameWin\v15\Server\sqlite3\db.lock" />
+    <None Include=".vs\MyGameWin\v15\Server\sqlite3\storage.ide" />
+    <None Include=".vs\MyGameWin\v15\Server\sqlite3\storage.ide-shm" />
+    <None Include=".vs\MyGameWin\v15\Server\sqlite3\storage.ide-wal" />
+    <None Include="app.config" />
+    <None Include="bin\Debug\MyGame.exe.config" />
+    <None Include="bin\Debug\MyGame.vshost.exe.config" />
+    <None Include="bin\Debug\MyGame.vshost.exe.manifest" />
+    <None Include="bin\Debug\Resources\fonts\arial.ttf" />
+    <None Include="bin\Debug\Resources\fonts\cour.ttf" />
+    <None Include="bin\Debug\Resources\fonts\maven_pro_regular.ttf" />
+    <None Include="bin\Debug\Resources\SwinGame.icns" />
+    <None Include="Info.plist" />
+    <None Include="MyGameWin.suo" />
+    <None Include="obj\Debug-Unix\MyGameUnx.csproj.CopyComplete" />
+    <None Include="obj\Debug-Unix\MyGameUnx.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug-Unix\MyGameUnx.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\MyGameMac.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\MyGameMac.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\x86\Debug-Windows\build.force" />
+    <None Include="obj\x86\Debug-Windows\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x86\Debug-Windows\MyGameWin.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\x86\Debug-Windows\MyGameWin.csprojAssemblyReference.cache" />
+    <None Include="obj\x86\Debug-Windows\MyGameWin.csprojResolveAssemblyReference.cache" />
+    <None Include="Resources\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <WinLibs Include="lib\win32\*.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\x86\Debug-Windows\TempPE\" />
+  </ItemGroup>
+  <Target Name="CopyLibsToOut">
+    <Copy SourceFiles="@(WinLibs)" DestinationFolder="$(OutDir)" />
+  </Target>
+</Project>
